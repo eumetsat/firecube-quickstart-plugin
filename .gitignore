@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# local QA/SBOM evidence, not shipped
+.reports/
+
+# generated sample data / ingestion output, not shipped
+sample_data/
+quickstart-data/
+.firecube/

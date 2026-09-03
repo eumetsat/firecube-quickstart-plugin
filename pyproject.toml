@@ -1,0 +1,31 @@
+[project]
+name = "firecube-quickstart-plugin"
+version = "0.1.0"
+description = "Firecube ingestor plugin for QuickstartPlugin"
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "MIT" }
+authors = [
+    { name = "Anna-Lena Erdmann", email = "annalena.erdmann@eumetsat.int" }
+]
+dependencies = [
+    "firecube>=0.1.0",
+    "xarray"
+]
+
+[project.entry-points."firecube.plugins"]
+quickstart_plugin = "firecube_quickstart_plugin"
+
+# [project.entry-points."firecube.plugin_cli"]
+# quickstart_plugin = "firecube_quickstart_plugin.plugin_cli:cli"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "pytest",
+    "ruff",
+    "mypy",
+]
